@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .background {
+                background-image: url("./background_texture.png");
+                background-size: cover;
+                width: 700px;
+                height: 701px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                gap: 2rem;
+            }
+            .pipe {
+                position: relative;
+                width: 20px;
+                height: 800px;
+                background-color: #fff;
+                /* overflow: hidden; */
+            }
+            .pipe_fill {
+                width: 20px;
+                height: 800px;
+                animation: fillAnimation 10s forwards;
+                position: absolute;
+                top: 0;
+            }
+
+            .circle-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+                position: relative;
+                z-index: 1;
+            }
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                border-radius: 50%;
+                border: 8px solid #fff;
+            }
+            .box {
+                background-color: #fff;
+                border: 1rem solid #9c2751;
+                width: 152.64px;
+                height: 120.38px;
+                border-radius: 10%;
+                position: absolute;
+                z-index: 1;
+            }
+            .box_container img {
+                position: relative;
+                z-index: 0;
+            }
+            .box_container {
+                background-image: url("./outer_frame.png");
+                width: 437px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 13px;
+            }
+            @keyframes fillAnimation {
+                0% {
+                    height: 0;
+                    background-color: #e74c3c;
+                }
+                100% {
+                    background-color: #e74c3c;
+                }
+            }
+            .Vector {
+                animation: rotateAnimation 4s linear infinite;
+            }
+
+            @keyframes rotateAnimation {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background">
+            <div class="pipe">
+                <div class="pipe_fill">
+                    <div class="circle-container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="box_container">
+                <div class="box"></div>
+                <img class="Vector" src="Vector.png" alt="" srcset="" />
+            </div>
+        </div>
+    </body>
+</html>
